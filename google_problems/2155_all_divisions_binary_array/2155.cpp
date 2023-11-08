@@ -21,14 +21,21 @@ public:
             }
             // score for all zeros on the left and ones on the right
             sum = currentZeroCount + (oneCount - (i + 1 - currentZeroCount));
-            if (maxScore < sum) {
+            if (maxScore == sum) {
                 maxScore = sum;
                 res.clear();
-                res.push_back(i);
+                res.push_back(i+1);
             } else if (maxScore < sum) {
-                res.push_back(i);
+                res.push_back(i+1);
             }
 
+        }
+        // special case 
+        if (oneCount >= maxScore) {
+            if (oneCount > maxScore) {
+                res.clear();
+            }
+            res.push_back(0);
         }
         return res;
         

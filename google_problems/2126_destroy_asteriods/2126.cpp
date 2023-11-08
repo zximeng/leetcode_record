@@ -1,3 +1,4 @@
+//just sort it and add would solve it easily
 class Solution {
 public:
     bool asteroidsDestroyed(int mass, vector<int>& asteroids) {
@@ -16,3 +17,7 @@ public:
         
     }
 };
+
+// not the best/correct answer, only beats 22% ?
+
+
