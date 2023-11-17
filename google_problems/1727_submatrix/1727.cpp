@@ -6,7 +6,7 @@ public:
         int n = matrix[0].size();
         // calculate the height
         for (int j = 0; j < n; j++) {
-            for (int i = 0; i < m; i++) {
+            for (int i = 1; i < m; i++) {
                 if (matrix[i][j]) {
                     matrix[i][j] += matrix[i-1][j];
                 }
